@@ -1,0 +1,116 @@
+.profile-page {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+  border: 2px solid var(--border-color);
+}
+
+.profile-info {
+  flex-grow: 1;
+}
+
+.profile-name {
+  font-size: 2em;
+  margin: 0;
+}
+
+.profile-email {
+  font-size: 1em;
+  color: var(--email-color);
+}
+
+.profile-description {
+  background-color: var(--description-background-color);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.profile-description h2 {
+  margin-top: 0;
+}
+
+.profile-cards {
+  background-color: var(--cards-background-color);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.profile-cards h2 {
+  margin-top: 0;
+}
+
+.profile-cards .MuiContainer-root {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile-cards .MuiTypography-root {
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 10px;
+  }
+
+  .profile-header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .profile-picture {
+    margin-bottom: 10px;
+  }
+
+  .profile-name {
+    font-size: 1.5em;
+  }
+
+  .profile-email {
+    font-size: 0.9em;
+  }
+
+  .profile-description {
+    padding: 15px;
+  }
+
+  .profile-cards {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-name {
+    font-size: 1.2em;
+  }
+
+  .profile-email {
+    font-size: 0.8em;
+  }
+
+  .profile-description {
+    padding: 10px;
+  }
+
+  .profile-cards {
+    padding: 10px;
+  }
+}

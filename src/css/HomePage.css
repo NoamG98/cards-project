@@ -1,0 +1,217 @@
+/* Light Mode Variables */
+:root {
+  --background-color-light: #e0f7fa;
+  --text-color-light: #00695c;
+  --header-background-color-light: #004d40;
+  --section-background-color-light: #80cbc4;
+  --border-color-light: #004d40;
+  --popup-background-color-light: #004d40;
+  --button-background-color-light: #00796b;
+  --button-hover-background-color-light: #004d40;
+}
+
+/* Dark Mode Variables */
+[data-theme="dark"] {
+  --background-color: #003d33; /* Darker background color */
+  --text-color: #ffffff; /* Light text color */
+  --header-background-color: #00695c; /* Dark header background color */
+  --section-background-color: #204027; /* Dark section background color */
+  --border-color: #00695c; /* Dark border color */
+  --popup-background-color: #004d40; /* Dark popup background color */
+  --button-background-color: #00796b; /* Dark button background color */
+  --button-hover-background-color: #005d52; /* Dark button hover background color */
+}
+
+.home-page {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+}
+
+
+[data-theme="dark"] .home-page {
+  background-color: transparent !important;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--header-background-color-light);
+  color: var(--text-color-light);
+  text-align: center;
+}
+
+
+[data-theme="dark"] .header {
+  background-color: var(--header-background-color) !important;
+}
+
+.header h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.info-section,
+.map-and-image-section,
+.cards-section,
+.plant-varieties-section {
+  padding: 20px;
+  background-color: var(--section-background-color-light);
+  border: 1px solid var(--border-color-light);
+  border-radius: 10px;
+  margin: 20px 0;
+  text-align: center;
+  min-height: 600px; 
+}
+
+
+[data-theme="dark"] .info-section,
+[data-theme="dark"] .map-and-image-section,
+[data-theme="dark"] .cards-section,
+[data-theme="dark"] .plant-varieties-section {
+  background-color: transparent !important;
+}
+
+.info-section h2,
+.plant-varieties-section h3,
+.weather-section h3 {
+  font-size: 1.5em;
+  color: var(--text-color); 
+}
+
+.info-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 40px auto;
+  display: block;
+  border-radius: 8px;
+}
+
+
+iframe {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  border: 0;
+}
+
+.plant-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.plant-card {
+  width: 45%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid var(--border-color-light);
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.plant-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.plant-card p {
+  margin: 10px 0;
+}
+
+.plant-card a {
+  color: var(--text-color-light);
+  text-decoration: none;
+}
+
+.plant-card a:hover {
+  text-decoration: underline;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--popup-background-color-light);
+  color: var(--text-color-light);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 300px;
+}
+
+.popup button {
+  background-color: var(--button-background-color-light);
+  color: var(--text-color-light);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.popup button:hover {
+  background-color: var(--button-hover-background-color-light);
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+  .header h1 {
+    font-size: 2.5em;
+  }
+
+  .info-image,
+  .map-image {
+    width: 100%;
+    border-radius: 12%;
+  }
+}
+
+@media (min-width: 768px) {
+  .info-section,
+  .map-and-image-section,
+  .cards-section,
+  .plant-varieties-section {
+    padding: 30px;
+  }
+
+  .info-section h2,
+  .plant-varieties-section h3 {
+    font-size: 2em;
+  }
+
+  iframe {
+    height: 450px;
+  }
+
+  .plant-card {
+    width: 30%;
+  }
+
+  .map-image {
+    width: 100%;
+    border-radius: 12%;
+  }
+}
+
+@media (min-width: 412px) {
+  .header h1 {
+    font-size: 2.5em;
+  }
+
+  .info-image,
+  .map-image {
+    width: 100%;
+    border-radius: 12%;
+  }
+  .info-section,
+  .map-and-image-section,
+  .cards-section,
+  .plant-varieties-section {
+    padding: 30px;
+  }
+}

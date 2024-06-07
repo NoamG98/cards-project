@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+import Router from "./routes/Router";
+import Layout from "./layout/Layout";
+import UserProvider from "./users/providers/UserProvider";
+import CustomThemeProvider from "./providers/CustomThemeProvider";
+import SnackbarProvider from "./providers/SnackbarProvider";
+import AlertProvider from "./providers/AlertProvider";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <UserProvider>
+        <AlertProvider>
+          <SnackbarProvider>
+            <CustomThemeProvider>
+              <Layout>
+                <Router />
+              </Layout>
+            </CustomThemeProvider>
+          </SnackbarProvider>
+        </AlertProvider>
+      </UserProvider>
+    </BrowserRouter>
   );
 }
 
