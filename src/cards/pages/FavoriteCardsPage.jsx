@@ -8,7 +8,7 @@ import ROUTES from "../../routes/routesModel";
 import { useUser } from "../../users/providers/UserProvider";
 import Spinner from "../../components/Spinner";
 
-export default function FavoritCardsPage() {
+export default function FavoriteCardsPage() {
   const { user } = useUser();
 
   const { value, handleCardDelete, handleCardLike, getAllCards } = useCards();
@@ -34,8 +34,8 @@ export default function FavoritCardsPage() {
   return (
     <div>
       <PageHeader
-        title="Favorit cards"
-        subtitle="On this page you can find all bussines cards you liked"
+        title="Favorite cards"
+        subtitle="On this page you can find all business cards you liked"
       />
       <CardsFeedBack
         cardsList={filteredCards}

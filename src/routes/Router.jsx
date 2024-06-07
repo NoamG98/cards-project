@@ -20,7 +20,7 @@ import HomePage from '../pages/HomePage';
 import ProfilePage from '../users/pages/profile/ProfilePage';
 import SearchResultsPage from '../pages/SearchResultsPage';
 import EditUserPage from '../users/pages/EditUserPage';
-import FavoritCardsPage from '../cards/pages/FavoritCardsPage';
+import FavoriteCardsPage from '../cards/pages/FavoriteCardsPage';
 
 export default function Router() {
   return (
@@ -32,7 +32,7 @@ export default function Router() {
       <Route path={ROUTES.CARD_INFO + '/:id'} element={<CardDetailsPage />} />
       <Route path={ROUTES.SIGNUP} element={<SignupPage />} />
       <Route path={ROUTES.LOGIN} element={<LoginPage />} />
-      <Route path={ROUTES.FAV_CARDS} element={<FavoritCardsPage />} />
+      <Route path={ROUTES.FAV_CARDS} element={<FavoriteCardsPage />} />
       <Route path={ROUTES.CREATE_CARD} element={<AddCardPage />} />
       <Route path={ROUTES.EDIT_CARD + '/:id'} element={<EditCardPage />} />
       <Route path={ROUTES.FORGOT_PASSWORD} element={<ForgotPasswordPage />} />
